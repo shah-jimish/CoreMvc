@@ -1,12 +1,15 @@
 using CoreMvc.DataAccess.Repository;
 using CoreMvc.Models;
 using CoreMvc.Models.ViewModels;
+using CoreMvc.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CoreMvc.Area.Admin.Controllers
+namespace CoreMvc.Areas.Admin.Controllers
 {
   [Area("Admin")]
+  [Authorize(Roles = StaticData.Role_Admin)]
   public class ProductController : Controller
   {
     private readonly IUnitOfWorks _unitOfWork;

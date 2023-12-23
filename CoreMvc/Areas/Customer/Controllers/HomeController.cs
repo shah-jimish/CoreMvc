@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using CoreMvc.Models;
 using CoreMvc.DataAccess.Repository;
 
-namespace CoreMvc.Area.Customer.Controllers;
+namespace CoreMvc.Areas.Customer.Controllers;
 [Area("Customer")]
 public class HomeController : Controller
 {
